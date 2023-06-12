@@ -4,63 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS | Simple Calculator</title>
-    <style>
-        input {
-            margin: 5px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <title>JS | Simple Calculator V.1.3 | Bootstrap</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <h2>JS | Simple Calculator</h2>
-    <input type="text" id="num1" placeholder="Enter number 1" />
-    <br />
-    <input type="text" id="num2" placeholder="Enter number 2" />
-    <br />
-    <button onclick="soma()">+</button>
-    <button onclick="subtracao()">-</button>
-    <button onclick="multiplicacao()">*</button>
-    <button onclick="divisao()">/</button>
-    <button onclick="limpar()">C</button>
-    <br />
-    <h3>Result: <span id="result"></span></h3>
+    <div class="container areaCalculadora">
+        <h1>JS | Simple Calculator</h1>
+        <div class="row">
+            <input type="text" id="resultado" value="" placeholder="0" readonly/>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-3">
+                <button onclick="limparResultado()" id="btnLimpar" type="button" class="btn btn-outline-warning">
+                    C
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button onclick="paraResultado(7)" id="btnValor7" class="btn btn-outline-primary" type="button">
+                    7
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="paraResultado(8)" id="btnValor8" class="btn btn-outline-primary" type="button">
+                    8
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="paraResultado(9)" id="btnValor9" class="btn btn-outline-primary" type="button">
+                    9
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="operacao('/')" id="btnDividir" class="btn btn-outline-success" type="button">
+                    /
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button onclick="paraResultado(4)" id="btnValor4" class="btn btn-outline-primary" type="button">
+                    4
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="paraResultado(5)" id="btnValor5" class="btn btn-outline-primary" type="button">
+                    5
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="paraResultado(6)" id="btnValor6" class="btn btn-outline-primary" type="button">
+                    6
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="operacao('*')" id="btnMultiplicar" class="btn btn-outline-success" type="button">
+                    *
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button onclick="paraResultado(1)" id="btnValor1" class="btn btn-outline-primary" type="button">
+                    1
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="paraResultado(2)" id="btnValor2" class="btn btn-outline-primary" type="button">
+                    2
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="paraResultado(3)" id="btnValor3" class="btn btn-outline-primary" type="button">
+                    3
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="operacao('-')" id="btnSubtrair" class="btn btn-outline-success" type="button">
+                    -
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button onclick="paraResultado(0)" id="btnValor0" class="btn btn-outline-primary" type="button">
+                    0
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="paraResultado('.')" id="btnPonto" class="btn btn-outline-success" type="button">
+                    .
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="calcular()" id="btnResultado" class="btn btn-outline-success" type="button">
+                    =
+                </button>
+            </div>
+            <div class="col-3">
+                <button onclick="operacao('+')" id="btnSoma" class="btn btn-outline-success" type="button">
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        function soma() {
-            var num1 = parseFloat(document.getElementById("num1").value);
-            var num2 = parseFloat(document.getElementById("num2").value);
-            var result = num1 + num2;
-            document.getElementById("result").innerText = result;
-        }
-
-        function subtracao() {
-            var num1 = parseFloat(document.getElementById("num1").value);
-            var num2 = parseFloat(document.getElementById("num2").value);
-            var result = num1 - num2;
-            document.getElementById("result").innerText = result;
-        }
-
-        function multiplicacao() {
-            var num1 = parseFloat(document.getElementById("num1").value);
-            var num2 = parseFloat(document.getElementById("num2").value);
-            var result = num1 * num2;
-            document.getElementById("result").innerText = result;
-        }
-
-        function divisao() {
-            var num1 = parseFloat(document.getElementById("num1").value);
-            var num2 = parseFloat(document.getElementById("num2").value);
-            var result = num1 / num2;
-            document.getElementById("result").innerText = result;
-        }
-
-        function limpar() {
-            document.getElementById("num1").value = "";
-            document.getElementById("num2").value = "";
-            document.getElementById("result").innerText = "";
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/calculator.js"></script>
 </body>
 
 </html>
