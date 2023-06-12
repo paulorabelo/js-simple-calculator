@@ -1,21 +1,28 @@
 let resultado = document.getElementById("resultado");
+let resultadoNoDisplay = false;
 
-        function paraResultado(value) {
-            resultado.value += value;
-        }
+function paraResultado(valor) {
+    if(resultadoNoDisplay){
+        resultado.value = "";
+        resultadoNoDisplay = false;
+    }
+    resultado.value += valor;
+}
 
-        function operacao(operator) {
-            resultado.value += operator;
-        }
+function operacao(operacao) {
+    resultado.value += operacao;
+}
 
-        function calcular() {
-            try {
-                resultado.value = eval(resultado.value);
-            } catch (error) {
-                resultado.value = "Error";
-            }
-        }
+function calcular() {
+    try {
+        resultado.value = eval(resultado.value);
+        resultadoNoDisplay = true;
+    } catch (error) {
+        resultado.value = "Error";
+    }
+}
 
-        function limparResultado() {
-            resultado.value = "";
-        }
+function limparResultado() {
+    resultado.value = "";
+    resultadoNoDisplay = false;
+}
