@@ -29,4 +29,4 @@ The updated calculator have a full numeric keypad with buttons from 0 to 9, a de
 
 ---
 # JS | Simple Calculator v.1.1
-![Alt text](image.png)  
+![Alt text](./assets/imagecss.png)  
