@@ -33,6 +33,22 @@ The updated calculator have a full numeric keypad with buttons from 0 to 9, a de
 
 ---  
 # JS | Simple Calculator v.1
-![Alt text](image.png)  
-![Alt text](image-2.png)  
-![Alt text](image-3.png)  
+
+Used technologies:
+
+- Bootstrap 5.3
+
+Here's the updated version of the script.js file that refactors the calculator to prepare for the next calculation when finishing the current calculation by pressing the "=" button:  
+<br>
+
+![Alt text](./assets/imageboot.png)  
+![Alt text](./assets/imageboot-2.png)  
+![Alt text](./assets/imageboot-3.png)  
+
+In this updated version, I added a new variable called `resultadoNoDisplay` to keep track of whether the result is currently displayed. When the user starts entering a new calculation after pressing "=", the previous result will be cleared, and the calculator will be ready for the next calculation.
+
+Now, when the `paraResultado` function is called, it checks if the result is currently displayed (`resultadoNoDisplay`). If it is, the input field is cleared, and the `resultadoNoDisplay` flag is set to false to indicate that a new calculation is being started.
+
+Similarly, in the `calcular` function, after evaluating the expression and displaying the result, the `resultadoNoDisplay` flag is set to true to indicate that the result is currently displayed.
+
+These changes ensure that when the user finishes a calculation and presses "=", the calculator is ready for the next calculation without requiring the user to manually clear the input field.
