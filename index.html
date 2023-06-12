@@ -10,7 +10,7 @@
 
 <body>
     <h2>JS | Simple Calculator</h2>
-    <input type="text" id="result" placeholder="0" readonly />
+    <input type="text" id="resultado" placeholder="0" readonly />
     <br />
     <table>
         <tr>
@@ -40,29 +40,7 @@
     </table>
     <button onclick="limparResultado()">C</button>
 
-    <script>
-        let result = document.getElementById("result");
-
-        function paraResultado(value) {
-            result.value += value;
-        }
-
-        function operacao(operator) {
-            result.value += operator;
-        }
-
-        function calcular() {
-            try {
-                result.value = eval(result.value);
-            } catch (error) {
-                result.value = "Error";
-            }
-        }
-
-        function limparResultado() {
-            result.value = "";
-        }
-    </script>
+    <script src="./js/calculator.js"></script>
 </body>
 
 </html>
