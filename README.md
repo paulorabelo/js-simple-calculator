@@ -1,4 +1,4 @@
-# JS | Simple Calculator v.1.0
+# JS | Simple Calculator v.0.1
 
 Used technologies:
 
@@ -17,7 +17,7 @@ See the project by clicking on the link below.
 [JS Calculator](https://paulorabelo.github.io/js-simple-calculator/)
 
 ---
-# JS | Simple Calculator v.1.1
+# JS | Simple Calculator v.0.2
 
 Here's an updated version of the calculator in JavaScript that includes a full numeric keypad and a "C" button to clear the data.  
 
@@ -28,5 +28,11 @@ Here's an updated version of the calculator in JavaScript that includes a full n
 The updated calculator have a full numeric keypad with buttons from 0 to 9, a decimal point button (.), and buttons for each operation (+, -, *, /). The input field will display the result of the calculation, and you can perform multiple calculations by entering numbers and operators. The "C" button will clear the input field.  
 
 ---
-# JS | Simple Calculator v.1.1
+# JS | Simple Calculator v.0.3
 ![Alt text](./assets/imagecss.png)  
+
+---  
+# JS | Simple Calculator v.1
+![Alt text](image.png)  
+![Alt text](image-2.png)  
+![Alt text](image-3.png)  
